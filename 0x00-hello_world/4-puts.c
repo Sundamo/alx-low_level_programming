@@ -1,10 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - print the string in put function
+ * main - entry point
  *
- *Description: using puts function
- * the program prints "Programming is like building a multilinqual puzzle"
+ * the program prints "Programming is like building a multilingual puzzle"
  * return: 0
  */
 int main(void)
