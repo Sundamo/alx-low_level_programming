@@ -30,30 +30,20 @@ void print_times_table(int n)
  */
 void putformat(int n)
 {
-	if (n <= 9)
+	if (n <= 99)
 	{
-		_putchar(',');
-		_putchar(' ');
-		_putchar(' ');
-		_putchar(' ');
-		_putchar(n + '0');
+		_putcher(' ');
 	}
-	else if (n > 9 && n <= 99)
+	if (n <= 9 && n >= 99)
 	{
-		_putchar(',');
-		_putchar(' ');
-		_putchar(' ');
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	else
-	{
-		_putchar(',');
 		_putchar(' ');
 		_putchar(n / 100 + '0');
-		_putchar(n / 10 % 10 + '0');
-		_putchar(n % 10 + '0');
+		_putchar((n / 10) % 10 + '0');
 	}
-	_putchar('\n');
+	else if (n <= 99 && n >= 10)
+	{
+		_putchar((n / 10) + '0');
+		_putchar((n % 10) + '0');
+	}
 }
 
