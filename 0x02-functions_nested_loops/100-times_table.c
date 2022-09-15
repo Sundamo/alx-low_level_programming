@@ -18,8 +18,8 @@ void print_times_table(int n)
 		for (j = 1; j <= n; j++)
 		{
 			putformat(i * j);
-			_putchar('\n');
 		}
+		_putchar('\n');
 	}
 }
 
