@@ -26,29 +26,29 @@ int base10(int n)
 
 void print_number(int n)
 {
-	int power;
-
-	power = base10(8);
+	unsigned int m, d, count;
 
 	if (n < 0)
 	{
-		_putchar('-');
-		n *= -1;
+		_putchar(45);
+		m = n * -1;
 	}
-
-	if (n == 0)
-		_putchar('0');
-
 	else
 	{
-		while (n / power == 0)
-			power /= 10;
+		m = n;
+	}
 
-		while (power >= 1)
-		{
-			_putchar((n / power) + '0');
-			n %= power;
-			power /= 10;
-		}
+	d = m;
+	count = 1;
+
+	while (d > 9)
+	{
+		d /= 10;
+		count *= 10;
+	}
+
+	for (; count >= 1; count /= 10)
+	{
+		_putchar(((m / count) % 10) + 48);
 	}
 }
