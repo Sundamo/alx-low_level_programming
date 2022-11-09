@@ -7,7 +7,7 @@
  *
  *
  * Return: If an error occurs - -1.
- * 	Otherwise - The value of bit at index.
+ * Otherwise - The value of bit at index.
  */
 
 int get_bit(unsigned long int n, unsigned int index)
