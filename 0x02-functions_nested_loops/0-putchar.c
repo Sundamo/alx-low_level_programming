@@ -2,12 +2,10 @@
 #include "stdio.h"
 
 /**
- * main - write a program
- *
- * description - a program that ptints _putchar
- *
- * return 0
+ * main -  prints _putchar, followed by a new line
+ * Return: Always 0 (Success)
  */
+
 
 int main(void)
 {
