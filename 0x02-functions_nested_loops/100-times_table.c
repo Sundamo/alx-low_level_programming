@@ -1,47 +1,42 @@
 #include "main.h"
+
 /**
- * print_times_table - prints the n times table
- * @n: the upper limit to be printed
+ * print_times_table - prints times table for numbers from 0-14
+ * @n: An input integer value
+ * Return: 0
  */
 void print_times_table(int n)
 {
-	int row;
-	int column;
-	int product;
+	int digit, mult, result;
 
-	if (n < 0 || n >= 15)
-		return;
-	for (row = 0; row <= n; row++)
+	if (n <= 15 && n >= 0)
 	{
-		for (column = 0; column <= n; column++)
+		for (digit = 0; digit <= n; digit++)
 		{
-			product = (row * column);
-			if (column == 0)
-				_putchar('0' + product);
-			else
+			_putchar('0');
+
+			for (mult = 1; mult <= n; mult++)
 			{
 				_putchar(',');
 				_putchar(' ');
-				if (product <= 9)
-				{
+				result = digit * mult;
+				if (result <= 99)
 					_putchar(' ');
+
+				if (result <= 9)
 					_putchar(' ');
-					_putchar('0' + product);
-				}
-				else if (product > 9 && product < 100)
+				if (result >= 100)
 				{
-					_putchar(' ');
-					_putchar('0' + (product / 10));
-					_putchar('0' + (product % 10));
+					_putchar((result / 100) + '0');
+					_putchar((result / 10) % 10 + '0');
 				}
-				else if (product >= 100)
+				else if (result <= 99 && result >= 10)
 				{
-					_putchar('0' + (product / 100));
-					_putchar('0' + ((product / 10) % 10));
-					_putchar('0' + (product % 10));
+					_putchar((result / 10) + '0');
 				}
+				_putchar((result % 10) + '0');
 			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
